@@ -1,2 +1,2 @@
-# little-lemon-app
+# Little Lemon App
 Meta Little Lemon Project
