@@ -1,12 +1,9 @@
 # Meta Little Lemon App Project 
 
-## UX / UI Design
+## UX / UI Design with Figma
 
-### UX Design 
-1. Empathise
-2. Define the problem
-3. Ideation
-4. Prototype
-5. Test and build 
+### Persona
+### Journey Map
+
 
 
