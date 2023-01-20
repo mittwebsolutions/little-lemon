@@ -1,8 +1,8 @@
 import { Link, useMatch, useResolvedPath } from "react-router-dom"
 import "./Nav.css"
-export default function Nav() {
+export default function Nav(props) {
   return (
-    <nav className="nav">
+    <nav className={props.position}> 
       <Link to="/" className="logo">
         Litte Lemon
       </Link>

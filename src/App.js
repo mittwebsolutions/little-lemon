@@ -1,5 +1,5 @@
-import Pages from "./Pages";
+import Page from "./Page";
 function App() {
-  return <Pages />
+  return <Page />
 }
 export default App;
