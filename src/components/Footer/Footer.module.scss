@@ -1,0 +1,69 @@
+@import "../../App.scss";
+
+footer {
+  background-color: $color-highlight1;
+  padding: 20px 0px;
+}
+
+footer > .container {
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.grid-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  margin-left: 20px;
+  font-size: 16px;
+  text-align: left;
+}
+
+@media (max-width: #{$grid-breakpoints-md}){
+  img.logo2 {
+    height: 150px
+  }
+  .grid-container {
+    flex-direction: column;
+  }
+}
+@media (min-width: #{$grid-breakpoints-md}){
+  img.logo2 {
+    height: 200px
+  }
+  .grid-container {
+    flex-direction: row;
+  }
+}
+
+.grid-label {
+  font-weight: bolder;
+  padding-bottom: 10px;
+}
+
+.grid-content > ul {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  font-weight: normal;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow-wrap: break-word;
+}
+
+.grid-content > ul > li > a {
+  @include link-highlight;
+}
+
+.nav-footer > ul {
+  flex-direction: column;
+  gap: 5px;
+  text-align: left;
+  font-size: 16px;
+}
+
+.nav-footer > ul > li > a {
+  font-weight: normal;
+}

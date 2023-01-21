@@ -1,0 +1,45 @@
+@import "../../../App.scss";
+
+.hero {
+  background-color: $color-primary1;
+  padding: 30px 0px;
+
+  p {
+    font-size: 18px;
+  }
+}
+
+.container {
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.text {
+  color: #FFFFFF;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  h1 {
+    color: $color-primary2;
+  }
+  p {
+    margin-bottom: auto;
+  }
+}
+
+.pic {
+  @include light-shadow;
+  max-width: 50%;
+  max-height: 300px;
+  border-radius: 5px;
+}
+
+@media (max-width: #{$grid-breakpoints-lg}){
+  .text {
+    height: 250px;
+  }
+  .pic {
+    display: none;
+  }
+}

@@ -1,0 +1,91 @@
+@import "../../App.scss";
+
+header {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  padding: 10px 0px;
+  background-color: #FFFFFF;
+  @include light-shadow;
+}
+
+header > .container {
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+img.logo {
+  display: block;
+  height: 40px;
+}
+
+.nav-container {
+  position: relative;
+  display: inline-block;
+}
+
+.nav-button {
+  background-color: $color-transparent;
+  border-color: $color-transparent;
+  color: $color-primary1;
+  font-size: 30px;
+  font-weight: bold;
+  height: 40px;
+  width: 70px;
+  padding: 0px;
+  cursor: pointer;
+}
+
+@media (max-width: #{$grid-breakpoints-lg}) {
+  .nav-button {
+    display: block;
+  }
+
+  .nav-header {
+    @include light-shadow;
+    right: 0;
+    display: none;
+    position: absolute;
+    margin-top: 10px;
+    padding: 20px;
+    border-radius: 5px;
+    background-color: #FFFFFF;
+
+    ul {
+      flex-direction: column;
+      gap: 20px;
+    }
+  }
+
+  .nav-container:hover,
+  .nav-container:focus {
+    > .nav-header {
+      display: block;
+    }
+
+    > .nav-button {
+      color: $color-primary2;
+    }
+  }
+}
+
+@media (min-width: #{$grid-breakpoints-lg}) {
+  .nav-button {
+    display: none
+  }
+
+  .nav-header {
+    position: relative;
+
+    ul {
+      flex-direction: row;
+      gap: 30px;
+    }
+  }
+}
+
+.nav-header li a {
+  text-align: center;
+  font-size: 18px;
+  font-weight: bold;
+}

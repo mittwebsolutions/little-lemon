@@ -1,0 +1,30 @@
+@import "../../../App.scss";
+
+.reviews {
+  background-color: $color-secondary2;
+  padding: 30px 0px;
+  h2 {
+    margin-bottom: 10px;
+  }
+}
+
+.card-list {
+  padding: 5px 5px;
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  width: 100%;
+  overflow-x: scroll;
+  @include scrollbar-hidden
+}
+
+.card {
+  flex-grow: 1;
+  flex-basis: 0;
+}
+
+@media (max-width: #{$grid-breakpoints-lg}){
+  .card-list {
+    gap: 10px;
+  }
+}

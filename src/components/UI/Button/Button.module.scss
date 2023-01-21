@@ -1,0 +1,51 @@
+@import "../../../App.scss";
+
+.button {
+  padding: 10px 15px;
+  border-radius: 30px;
+  border: 4px solid $color-transparent;
+  height: fit-content;
+  width: fit-content;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  @include light-shadow;
+  @include transition-default(all);
+
+  &.primary {
+    background-color: $color-primary2;
+    color: #000000;
+    &:hover, &:focus {
+      background-color: #FFFFFF;
+      border-color: $color-primary1;
+      color: $color-primary1;
+    }
+  }
+  &.secondary {
+    background-color: $color-secondary1;
+    color: #FFFFFF;
+    &:hover, &:focus {
+      border-color: $color-secondary1;
+      background-color: $color-secondary2;
+      color: #000000;
+    }
+  }
+  &.default {
+    background-color: $color-highlight1;
+    color: $color-primary1;
+    &:hover, &:focus {
+      background-color: $color-primary1;
+      color: #FFFFFF;
+    }
+  }
+}
+
+.wide {
+  width: 100%;
+}
+
+.disabled, .disabeld:hover, .disabled:focus {
+  background-color: #FFFFFF !important;
+  border-color: $color-highlight1  !important;
+  color: $color-highlight1 !important;
+}

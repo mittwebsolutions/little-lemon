@@ -1,0 +1,38 @@
+@import "../../../App.scss";
+
+
+.input-field {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  label {
+    font-size: 20px;
+    font-weight: bold;
+  }
+
+  input, select {
+    height: 40px;
+    outline: 2px solid $color-highlight1;
+    border: 0px transparent;
+    border-radius: 10px;
+    padding: 0px 10px;
+    font-family: $font-karla;
+    font-size: 16px;
+    @include transition-default(outline);
+    &:hover, &:focus {
+      outline-color: $color-primary1;
+    }
+    &::placeholder {
+      color: $color-highlight1;
+      opacity: 1;
+    }
+  }
+
+  .error {
+    height: 14px;
+    text-align: left;
+    font-size: 14px;
+    color: $color-error;
+  }
+}

@@ -1,0 +1,6 @@
+@import "../../App.scss";
+
+main {
+  // Minimally header, main, and footer are visible
+  min-height: calc(100vh - 60px - 244px);
+}

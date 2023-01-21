@@ -1,0 +1,14 @@
+@import "../../App.scss";
+
+.nav ul {
+  display: flex;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+.nav li a {
+  @include link-highlight;
+  text-decoration: none;
+}

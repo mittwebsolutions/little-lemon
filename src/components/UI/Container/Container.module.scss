@@ -1,0 +1,37 @@
+@import "../../../App.scss";
+
+.container {
+  width: 300px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Breakpoints */
+@media (min-width: #{$grid-breakpoints-sm}){
+  .container {
+    width: #{$grid-breakpoints-xs};
+  }
+}
+@media (min-width: #{$grid-breakpoints-md}){
+  .container {
+    width: #{$grid-breakpoints-sm};
+  }
+}
+@media (min-width: #{$grid-breakpoints-lg}){
+  .container {
+    width: #{$grid-breakpoints-md};
+  }
+}
+@media (min-width: #{$grid-breakpoints-xl}) {
+  .container {
+    width: #{$grid-breakpoints-lg};
+  }
+}
+@media (min-width: #{$grid-breakpoints-xxl}) {
+  .container {
+    width: #{$grid-breakpoints-xl};
+  }
+}

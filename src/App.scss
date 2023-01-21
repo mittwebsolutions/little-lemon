@@ -1,0 +1,70 @@
+/* Fonts */
+$font-markazi: "Markazi Text";
+$font-karla: "Karla";
+
+/* Colors */
+$color-primary1: #495E57;
+$color-primary2: #F4CE14;
+$color-secondary1: #EE9972;
+$color-secondary2: #FBDABB;
+$color-highlight1: #EDEFEE;
+$color-highlight2: #333333;
+$color-shadow: #00000030;
+$color-transparent: #FFFFFF00;
+$color-error: #F02020;
+
+/* Breakpoints */
+$grid-breakpoints-xxs: 0px;
+$grid-breakpoints-xs: 375px;
+$grid-breakpoints-sm: 544px;
+$grid-breakpoints-md: 768px;
+$grid-breakpoints-lg: 992px;
+$grid-breakpoints-xl: 1200px;
+$grid-breakpoints-xxl: 1400px;
+
+/* Mixins */
+@mixin transition-default($prop) {
+  transition: $prop 0.15s;
+  transition-timing-function: ease-in-out;
+}
+
+@mixin link-highlight {
+  color: $color-highlight2;
+  @include transition-default(color);
+  &:hover, &:focus {
+    color: $color-primary2;
+  }
+}
+
+@mixin light-shadow {
+  box-shadow: 0 0 5px 0px $color-shadow;
+}
+
+@mixin scrollbar-hidden {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+body {
+  font-family: $font-karla, sans-serif;
+  font-size: 16px;
+}
+
+.heading {
+  font-family: $font-markazi, sans-serif;
+  font-weight: normal;
+  margin: 0;
+}
+
+h1 {
+  font-size: 50px;
+}
+h2 {
+  font-size: 40px;
+}
+h3 {
+  font-size: 30px;
+}
